@@ -23,10 +23,18 @@ If you have any trouble with any of those steps, don't worry, we will have some 
 
 Dinner will be provided, thanks to the generous sponsorship of UNC BIOS and the Odum Institutes!
 
-Lastly, parking on Duke's campus can be tricky.
-
-The main visitor lot at Duke is at **Bryan Center** (allow 10 minutes for walk), however since this will be a basketball game day at Duke, it might be busy there. Other lots that are not too far from the venue are **Duke Gardens** (allow 10 minutes for walk) and **Research Dr Garage (serving Eye Center)** (allow 15 minutes for walk).
-
-If you need to ask for directions students on campus should be able to direct you in the direction of Bostock Library. The Edge is the name of the first floor of this library where we'll be holding the event.
+A few parking options are listed below. We will be sending additional parking information before the meetup.
 
 Looking forward to seeing you all on Thursday!
+
+
+Parking:
+
+Public parking on Franklin Street (about a 5-10 min walk to the building where the meet up is going to be held). The public parking lots info are:
+
+  - https://www.google.com/maps/place/Public+Parking/@35.9159769,-79.0533525,16z/data=!4m8!1m2!2m1!1spublic+parking!3m4!1s0x0:0x546a00d366dd4b23!8m2!3d35.9145711!4d-79.054774
+  - https://www.google.com/maps/place/Wallace+Parking+Deck/@35.9159769,-79.0533525,16z/data=!4m8!1m2!2m1!1spublic+parking!3m4!1s0x0:0xcd2d2e4801704a29!8m2!3d35.914759!4d-79.0542363
+
+They are two huge parking decks opposite each other. Walking directions to Greenlaw from there is:
+
+https://www.google.com/maps/dir/Greenlaw+Hall,+Chapel+Hill,+NC/Wallace+Parking+Deck,+150+E+Rosemary+St,+Chapel+Hill,+NC+27514/@35.912751,-79.0539171,17z/am=t/data=!4m13!4m12!1m5!1m1!1s0x89acc2e90a34382f:0x2c3b7d6ca7bffc49!2m2!1d-79.0492586!2d35.9103861!1m5!1m1!1s0x89acc2dd440f2675:0xcd2d2e4801704a29!2m2!1d-79.0542363!2d35.914759
