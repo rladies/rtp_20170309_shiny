@@ -1,4 +1,4 @@
-Our March meetup is this Thursday in Chapel Hill
+Our March meetup is this Thursday in Chapel Hill!
 
 Interactive visualizations with Shiny
 Thursday, March 9
