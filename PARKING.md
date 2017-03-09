@@ -4,7 +4,7 @@
 
 - Pink highlighted: Greenlaw. The classroom is on the ground floor. 
 
-- Green highlighted: Three suggested decks for parking. Most decks ipen up at 5pm but we suggest trying these first:
+- Green highlighted: Three suggested decks for parking. Most decks open up at 5pm but we suggest trying these first:
   - N11
   - Cobb parking deck (ND)
   - Bell tower parking deck (BTD)
