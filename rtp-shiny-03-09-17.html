@@ -93,7 +93,7 @@
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">February 9, 2017</p>
+            <p style="margin-top: 6px; margin-left: -2px;">March 9, 2017</p>
           </hgroup>
   </slide>
 
@@ -102,8 +102,12 @@
 </article></slide><slide class=''><hgroup><h2>Materials</h2></hgroup><article  id="materials">
 
 <ul>
-<li><p>All source code at <a href='https://github.com/rladies/rtp_20170309_shiny' title=''>https://github.com/rladies/rtp_20170309_shiny</a></p></li>
-<li><p>Slides at TBA</p></li>
+<li>All source code at <a href='https://github.com/rladies/rtp_20170309_shiny' title=''>https://github.com/rladies/rtp_20170309_shiny</a>
+
+<ul>
+<li>Download the contents of the repo, we&#39;ll need the R scripts and data in the apps folder</li>
+</ul></li>
+<li>Slides at <a href='http://rpubs.com/mine/rladies-shiny-reactivity101' title=''>http://rpubs.com/mine/rladies-shiny-reactivity101</a></li>
 </ul>
 
 </article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Reactivity 101</h2></hgroup><article  id="reactivity-101">
@@ -132,15 +136,14 @@ server &lt;- function(input, output) {
 
 <p><code>movies.Rdata</code>: Data from IMDB and Rotten Tomatoes on random sample of 651 movies released in the US between 1970 and 2014</p>
 
-<p><code>movies.R</code>: Single file app for browsing movies</p>
+<p><code>movies_01.R</code>: Single file app for browsing movies</p>
 
 </article></slide><slide class=''><hgroup><h2>Exercise</h2></hgroup><article  id="exercise">
 
-<p>In the movies app:</p>
-
 <ul>
-<li>Add a new sliderInput defining the size of points (ranging from 0 to 5)</li>
-<li>Use this variable in the geom of the ggplot function as the size argument</li>
+<li>Start with <code>movies_01.R</code></li>
+<li>Add a new <code>sliderInput</code> defining the size of points (ranging from 0 to 5), see <a href='https://shiny.rstudio.com/reference/shiny/latest/sliderInput.html' title=''>https://shiny.rstudio.com/reference/shiny/latest/sliderInput.html</a> for help with defining a <code>sliderInput</code></li>
+<li>Use this variable in the geom of the <code>ggplot</code> function as the <code>size</code> argument</li>
 <li>Run the app to ensure that point sizes react when you move the slider</li>
 <li>Compare your code / output with the person sitting next to / nearby you</li>
 </ul>
@@ -235,7 +238,20 @@ output$n &lt;- renderText({
 
 <p>See <code>movies_03.R</code></p>
 
-<p>(also notice the little bit of HTML code, added for visual separation, in the <code>mainPanel</code>)</p></article></slide>
+<p>(also notice the little bit of HTML code, added for visual separation, in the <code>mainPanel</code>)</p>
+
+</article></slide><slide class=''><hgroup><h2>When to use reactives</h2></hgroup><article  id="when-to-use-reactives">
+
+<ul>
+<li><p>By using a reactive expression for the subsetted data frame, we were able to get away with subsetting once and then using the result twice</p></li>
+<li>In general, reactive conductors let you
+
+<ul>
+<li>not repeat yourself (i.e. avoid copy-and-paste code) which is a maintenance boon</li>
+<li>decompose large, complex (code-wise, not necessarily CPU-wise) calculations into smaller pieces to make them more understandable</li>
+</ul></li>
+<li><p>These benefits are similar to what happens when you decompose a large complex R script into a series of small functions that build on each other</p></li>
+</ul></article></slide>
 
 
   <slide class="backdrop"></slide>

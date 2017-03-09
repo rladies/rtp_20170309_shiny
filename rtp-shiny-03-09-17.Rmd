@@ -1,7 +1,7 @@
 ---
 title: "R / git / GitHub"
 author: "Mine Cetinkaya-Rundel"
-date: "February 9, 2017"
+date: "March 9, 2017"
 output: ioslides_presentation
 ---
 
@@ -14,8 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Materials
 
 - All source code at https://github.com/rladies/rtp_20170309_shiny
+    - Download the contents of the repo, we'll need the R scripts and data in the apps folder
 
-- Slides at TBA
+- Slides at http://rpubs.com/mine/rladies-shiny-reactivity101
 
 
 # Reactivity 101
@@ -46,14 +47,13 @@ server <- function(input, output) {
 
 `movies.Rdata`: Data from IMDB and Rotten Tomatoes on random sample of 651 movies released in the US between 1970 and 2014
 
-`movies.R`: Single file app for browsing movies
+`movies_01.R`: Single file app for browsing movies
 
 ## Exercise
 
-In the movies app:
-
-- Add a new sliderInput defining the size of points (ranging from 0 to 5)
-- Use this variable in the geom of the ggplot function as the size argument
+- Start with `movies_01.R`
+- Add a new `sliderInput` defining the size of points (ranging from 0 to 5), see https://shiny.rstudio.com/reference/shiny/latest/sliderInput.html for help with defining a `sliderInput`
+- Use this variable in the geom of the `ggplot` function as the `size` argument
 - Run the app to ensure that point sizes react when you move the slider
 - Compare your code / output with the person sitting next to / nearby you
 
@@ -150,3 +150,13 @@ output$n <- renderText({
 See `movies_03.R`
 
 (also notice the little bit of HTML code, added for visual separation, in the `mainPanel`)
+
+## When to use reactives
+
+- By using a reactive expression for the subsetted data frame, we were able to get away with subsetting once and then using the result twice
+
+- In general, reactive conductors let you
+    - not repeat yourself (i.e. avoid copy-and-paste code) which is a maintenance boon
+    - decompose large, complex (code-wise, not necessarily CPU-wise) calculations into smaller pieces to make them more understandable
+
+- These benefits are similar to what happens when you decompose a large complex R script into a series of small functions that build on each other
