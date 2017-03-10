@@ -81,13 +81,8 @@ ui <- fluidPage(
       checkboxGroupInput(inputId = "selected_type",
                          label = "Select movie type(s):",
                          choice = c("Documentary", "Feature Film", "TV Movie"),
-                         selected = "Feature Film"),
+                         selected = "Feature Film")
       
-      # Select sample size ----------------------------------------------------
-      numericInput(inputId = "n_samp", 
-                   label = "Sample size:", 
-                   min = 1, max = nrow(movies), 
-                   value = 50)
     ),
     
     # Output: -----------------------------------------------------------------
@@ -116,15 +111,9 @@ server <- function(input, output) {
       filter(title_type %in% input$selected_type)
   })
   
-  # Create a new data frame that is n_samp observations from selected type movies --
-  movies_sample <- reactive({ 
-    movies_subset() %>%
-      sample_n(input$n_samp) 
-  })
-  
   # Create the scatterplot object the plotOutput function is expecting --------
   output$scatterplot <- renderPlot({
-    ggplot(data = movies_sample(), aes_string(x = input$x, y = input$y,
+    ggplot(data = movies_subset(), aes_string(x = input$x, y = input$y,
                                               color = input$z)) +
       geom_point(alpha = input$alpha, size = input$size) +
       labs(x = toTitleCase(str_replace_all(input$x, "_", " ")),
@@ -135,7 +124,7 @@ server <- function(input, output) {
   
   # Print number of movies plotted --------------------------------------------
   output$n <- renderText({
-    counts <- movies_sample() %>%
+    counts <- movies_subset() %>%
       group_by(title_type) %>%
       summarise(count = n()) %>%
       select(count) %>%
@@ -146,7 +135,7 @@ server <- function(input, output) {
   # Print data table if checked -----------------------------------------------
   output$moviestable <- DT::renderDataTable(
     if(input$show_data){
-      DT::datatable(data = movies_sample()[, 1:7], 
+      DT::datatable(data = movies_subset()[, 1:7], 
                     options = list(pageLength = 10), 
                     rownames = FALSE)
     }
