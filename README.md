@@ -2,7 +2,7 @@
 
 Materials for the Interactive visualizations with Shiny RTP meetup. 
 
-Slides can be viewed at [TBA].
+Slides can be viewed at http://rpubs.com/mine/rladies-shiny-reactivity101.
 
 Sign up at https://www.meetup.com/R-Ladies-RTP/events/237358623/.
 
